@@ -1,6 +1,10 @@
-const dynamodb = new AWS.DynamoDB({apiVersion: '2012-08-10', region: 'us-east-1'});
+'use strict'
 
-function putGramsOfProtein(userId, date, gramsOfProtein, cb) {
+const AWS = require('aws-sdk');
+const DDB = new AWS.DynamoDB({apiVersion: '2012-08-10', region: 'us-east-1'});
+const TABLE_NAME = 'ProteinTracker';
+
+exports.putGramsOfProtein = function(userId, date, gramsOfProtein, cb) {
     var params = {
         TableName: TABLE_NAME,
         Item: {
@@ -15,10 +19,10 @@ function putGramsOfProtein(userId, date, gramsOfProtein, cb) {
             }
         }
     };
-    this.dynamodb.putItem(params, cb);
+    DDB.putItem(params, cb);
 }
 
-function readGramsOfProtein(userId, date, cb) {
+exports.readGramsOfProtein = function(userId, date, cb) {
     var params = {
         TableName: TABLE_NAME,
         Key: {
@@ -31,10 +35,10 @@ function readGramsOfProtein(userId, date, cb) {
         },
         ProjectionExpression: 'gramsOfProtein'
     };
-    this.dynamodb.getItem(params, cb);
+    DDB.getItem(params, cb);
 }
 
-function updateGramsOfProtein(userId, date, gramsOfProtein, cb) {
+exports.updateGramsOfProtein = function(userId, date, gramsOfProtein, cb) {
     var params = {
         TableName: TABLE_NAME,
         Key: {
@@ -51,10 +55,10 @@ function updateGramsOfProtein(userId, date, gramsOfProtein, cb) {
         },
         ReturnValues: 'ALL_NEW'
     };
-    this.dynamodb.updateItem(params, cb);
+    DDB.updateItem(params, cb);
 }
 
-function deleteGramsOfProtein(userId, date, cb) {
+exports.deleteGramsOfProtein = function(userId, date, cb) {
     var params = {
         TableName: TABLE_NAME,
         Key: {
@@ -68,21 +72,5 @@ function deleteGramsOfProtein(userId, date, cb) {
         ConditionExpression: 'attribute_exists(gramsOfProtein)',
         ReturnValues: 'ALL_OLD'
     };
-    this.dynamodb.deleteItem(params, cb);
+    DDB.deleteItem(params, cb);
 }
-
-const LANGUAGE_STRINGS = {
-    'en-US': {
-        translation: {
-            SKILL_NAME: 'Protein Tracker',
-            WELCOME_MESSAGE: 'Welcome to %s, %s',
-            HELP_MESSAGE: 'You can say add twenty grams of protein, or, you can say exit... What can I help you with?',
-            HELP_REPROMPT: 'What can I help you with?',
-            STOP_MESSAGE: 'Goodbye!',
-            ADD_PROTEIN_MESSAGE: "I\'ve added %s grams of protein to your log",
-            ADD_PROTEIN_CARD_TITLE: "%s - %s grams added",
-            HOW_MUCH_PROTEIN_TODAY_MESSAGE: "You've eaten %s grams of protein today",
-            HOW_MUCH_PROTEIN_TODAY_CARD_TITLE: "%s - %s grams eaten today"
-        },
-    },
-};
