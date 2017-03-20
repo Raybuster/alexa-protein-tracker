@@ -1,0 +1,29 @@
+{
+  "name": "protein-tracker",
+  "version": "1.0.0",
+  "description": "Track how much protein you eat",
+  "main": "index.js",
+  "dependencies": {
+    "alexa-sdk": "^1.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raybuster/alexa-protein-tracker.git"
+  },
+  "keywords": [
+    "amazon",
+    "echo",
+    "alexa",
+    "skills"
+  ],
+  "author": "Josh Swaney",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raybuster/alexa-protein-tracker/issues"
+  },
+  "homepage": "https://github.com/raybuster/alexa-protein-tracker#readme"
+}
