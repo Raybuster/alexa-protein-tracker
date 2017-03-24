@@ -24,12 +24,18 @@ const handlers = {
         const gramsOfProtein = this.event.request.intent.slots.GramsOfProtein.value;
         const date = this.event.request.intent.slots.Date.value || this.event.request.timestamp.slice(0, 10);
 
-        (function write(index) {ProteinTracker.putGramsOfProtein(userId, date, gramsOfProtein, function(err, result) {
-            const cardTitle = index.t("ADD_PROTEIN_CARD_TITLE", index.t("SKILL_NAME"), gramsOfProtein);
-            const speechOutput = index.t('ADD_PROTEIN_MESSAGE', gramsOfProtein);
+        if (isNaN(gramsOfProtein)) {
+            const speechOutput = this.t('HELP_MESSAGE');
+            const reprompt = this.t('HELP_MESSAGE');
+            this.emit(':ask', speechOutput, reprompt);
+        } else {
+            (function write(index) {ProteinTracker.updateGramsOfProtein(userId, date, gramsOfProtein, function(err, result) {
+                const cardTitle = index.t("ADD_PROTEIN_CARD_TITLE", index.t("SKILL_NAME"), gramsOfProtein);
+                const speechOutput = index.t('ADD_PROTEIN_MESSAGE', gramsOfProtein);
 
-            index.emit(':tellWithCard', speechOutput, cardTitle);
-        })})(this);
+                index.emit(':tellWithCard', speechOutput, cardTitle);
+            })})(this);
+        }
     },
     'HowMuchProtein': function () {
         const userId = this.event.session.user.userId;
@@ -38,7 +44,7 @@ const handlers = {
 
         (function read(index) {ProteinTracker.readGramsOfProtein(userId, date, function(err, result) {
             var gramsOfProtein = 0;
-            if (result.Item.gramsOfProtein) {
+            if (result && result.Item && result.Item.gramsOfProtein) {
                 gramsOfProtein = result.Item.gramsOfProtein.N;
             }
 
