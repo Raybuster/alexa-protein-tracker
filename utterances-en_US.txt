@@ -268,7 +268,6 @@ AddGramsOfProtein to note {GramsOfProtein} grams of protein {Date}
 AddGramsOfProtein to note {GramsOfProtein} grams of proteins {Date}
 AddGramsOfProtein to note {GramsOfProtein} protein {Date}
 AddGramsOfProtein to note {GramsOfProtein} proteins {Date}
-HowMuchProtein {Date}
 HowMuchProtein how much
 HowMuchProtein how much have I had
 HowMuchProtein how much am I at
@@ -351,3 +350,85 @@ HowMuchProtein what is my total protein
 HowMuchProtein what are my total grams
 HowMuchProtein what are my total grams of protein
 HowMuchProtein what are the total grams of protein
+HowMuchProtein how much {Date}
+HowMuchProtein how much have I had {Date}
+HowMuchProtein how much am I at {Date}
+HowMuchProtein how much have I eaten {Date}
+HowMuchProtein how much have I consumed {Date}
+HowMuchProtein how much have I added {Date}
+HowMuchProtein how much have I tracked {Date}
+HowMuchProtein how much have I counted {Date}
+HowMuchProtein how much have I recorded {Date}
+HowMuchProtein how much have I tallied {Date}
+HowMuchProtein how much have I documented {Date}
+HowMuchProtein how much have I noted {Date}
+HowMuchProtein how much protein {Date}
+HowMuchProtein how much protein have I had {Date}
+HowMuchProtein how much protein am I at {Date}
+HowMuchProtein how much protein have I eaten {Date}
+HowMuchProtein how much protein have I consumed {Date}
+HowMuchProtein how much protein have I added {Date}
+HowMuchProtein how much protein have I tracked {Date}
+HowMuchProtein how much protein have I counted {Date}
+HowMuchProtein how much protein have I recorded {Date}
+HowMuchProtein how much protein have I tallied {Date}
+HowMuchProtein how much protein have I documented {Date}
+HowMuchProtein how much protein have I noted {Date}
+HowMuchProtein how many grams {Date}
+HowMuchProtein how many grams have I had {Date}
+HowMuchProtein how many grams am I at {Date}
+HowMuchProtein how many grams have I eaten {Date}
+HowMuchProtein how many grams have I consumed {Date}
+HowMuchProtein how many grams have I added {Date}
+HowMuchProtein how many grams have I tracked {Date}
+HowMuchProtein how many grams have I counted {Date}
+HowMuchProtein how many grams have I recorded {Date}
+HowMuchProtein how many grams have I tallied {Date}
+HowMuchProtein how many grams have I documented {Date}
+HowMuchProtein how many grams have I noted {Date}
+HowMuchProtein how many grams of protein {Date}
+HowMuchProtein how many grams of proteins {Date}
+HowMuchProtein how many grams of protein have I had {Date}
+HowMuchProtein how many grams of protein am I at {Date}
+HowMuchProtein how many grams of protein have I eaten {Date}
+HowMuchProtein how many grams of protein have I consumed {Date}
+HowMuchProtein how many grams of protein have I added {Date}
+HowMuchProtein how many grams of protein have I tracked {Date}
+HowMuchProtein how many grams of protein have I counted {Date}
+HowMuchProtein how many grams of protein have I recorded {Date}
+HowMuchProtein how many grams of protein have I tallied {Date}
+HowMuchProtein how many grams of protein have I documented {Date}
+HowMuchProtein how many grams of protein have I noted {Date}
+HowMuchProtein how many grams of proteins have I had {Date}
+HowMuchProtein how many grams of proteins am I at {Date}
+HowMuchProtein how many grams of proteins have I eaten {Date}
+HowMuchProtein how many grams of proteins have I consumed {Date}
+HowMuchProtein how many grams of proteins have I added {Date}
+HowMuchProtein how many grams of proteins have I tracked {Date}
+HowMuchProtein how many grams of proteins have I counted {Date}
+HowMuchProtein how many grams of proteins have I recorded {Date}
+HowMuchProtein how many grams of proteins have I tallied {Date}
+HowMuchProtein how many grams of proteins have I documented {Date}
+HowMuchProtein how many grams of proteins have I noted {Date}
+HowMuchProtein what is my count {Date}
+HowMuchProtein what is the count {Date}
+HowMuchProtein what is my gram count {Date}
+HowMuchProtein what is the gram count {Date}
+HowMuchProtein what is my protein count {Date}
+HowMuchProtein what is the protein count {Date}
+HowMuchProtein what is my tally {Date}
+HowMuchProtein what is the tally {Date}
+HowMuchProtein what is my gram tally {Date}
+HowMuchProtein what is the gram tally {Date}
+HowMuchProtein what is my protein tally {Date}
+HowMuchProtein what is the protein tally {Date}
+HowMuchProtein what is my sum {Date}
+HowMuchProtein what is the sum {Date}
+HowMuchProtein what is my total {Date}
+HowMuchProtein what is the total {Date}
+HowMuchProtein what is my sum total {Date}
+HowMuchProtein what is the sum total {Date}
+HowMuchProtein what is my total protein {Date}
+HowMuchProtein what are my total grams {Date}
+HowMuchProtein what are my total grams of protein {Date}
+HowMuchProtein what are the total grams of protein {Date}

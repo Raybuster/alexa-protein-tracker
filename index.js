@@ -16,7 +16,7 @@ exports.handler = (event, context) => {
 const handlers = {
     'LaunchRequest': function () {
         const speechOutput = this.t('HELP_MESSAGE');
-        const reprompt = this.t('HELP_MESSAGE');
+        const reprompt = this.t('HELP_REPROMPT');
         this.emit(':ask', speechOutput, reprompt);
     },
     'AddGramsOfProtein': function () {
@@ -26,7 +26,7 @@ const handlers = {
 
         if (isNaN(gramsOfProtein)) {
             const speechOutput = this.t('HELP_MESSAGE');
-            const reprompt = this.t('HELP_MESSAGE');
+            const reprompt = this.t('HELP_REPROMPT');
             this.emit(':ask', speechOutput, reprompt);
         } else {
             (function write(index) {ProteinTracker.updateGramsOfProtein(userId, date, gramsOfProtein, function(err, result) {
@@ -56,7 +56,7 @@ const handlers = {
     },
     'AMAZON.HelpIntent': function () {
         const speechOutput = this.t('HELP_MESSAGE');
-        const reprompt = this.t('HELP_MESSAGE');
+        const reprompt = this.t('HELP_REPROMPT');
         this.emit(':ask', speechOutput, reprompt);
     },
     'AMAZON.CancelIntent': function () {
